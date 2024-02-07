@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}Bot Actions{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<div class="d-flex flex-column align-items-center">
+    <div>
+        <h1>Bot Actions</h1>
+
+        <form>
+            <div class="form-check form-switch">
+                <label class="form-check-label">
+                    Extrabot-Service
+                    <input class="form-check-input" role="switch" type="checkbox" id="Extrabot-Service">
+                </label>
+            </div>
+            <div class="form-check form-switch">
+                <label class="form-check-label">
+                    Extrabot-Discord
+                    <input class="form-check-input" role="switch" type="checkbox" id="Extrabot-Discord">
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
