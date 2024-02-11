@@ -5,23 +5,32 @@
 {% endblock %}
 {% block content %}
 <div class="d-flex flex-column align-items-center">
-    <div>
-        <h1>Bot Actions</h1>
+    <div class="container-fluid col-md-8">
+        <h1>Services</h1>
 
-        <form>
-            <div class="form-check form-switch">
-                <label class="form-check-label">
-                    Extrabot-Service
-                    <input class="form-check-input" role="switch" type="checkbox" id="Extrabot-Service">
-                </label>
-            </div>
-            <div class="form-check form-switch">
-                <label class="form-check-label">
-                    Extrabot-Discord
-                    <input class="form-check-input" role="switch" type="checkbox" id="Extrabot-Discord">
-                </label>
-            </div>
-        </form>
+        <table class="table table-dark table-hover table-bordered">
+            <thead class="table-dark">
+                <th scope="col" class="col">Service</th>
+                <th scope="col" class="col">Description</th>
+                <th scope="col" class="col">Status</th>
+                <th scope="col" class="col">Actions</th>
+            </thead>
+            <tbody>
+                <tr id="Extrabot">
+                    <td>Extrabot</td>
+                    <td>SL Bot running for Extra</td>
+                    <td>status</td>
+                    <td class="Actions"></td>
+                </tr>
+                <tr id="Extrabot-Discord">
+                    <td>Extrabot-Discord</td>
+                    <td>Discord bot handling messages from the Extrabot</td>
+                    <td>status</td>
+                    <td class="Actions"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
+<script src="{{ url_for('static', filename='js/action-buttons.js') }}"></script>
 {% endblock %}
